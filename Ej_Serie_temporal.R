@@ -7,7 +7,7 @@ require(ggplot2)
 require(lubridate)
 
 #Abro el archivo ncdf
-archivo = "~/PracticasLabo/air.mon.mean.nc"
+archivo = "~/Documentos/Labo_Luca/Practica_4/air.mon.mean.nc"
 nc = nc_open(archivo)
 nc
 
@@ -44,10 +44,10 @@ grafico = grafico + geom_point(color = "black")
  #Agrego la linea de tendencia lineal
 grafico = grafico + geom_smooth(method = "lm", color = "darkgrey", se = F)
  #Le pongo titulo y nombres a los ejes
-grafico = grafico + labs(title = "Temperatura del aire",
+grafico = grafico + labs(title = "Promedio anual",
                          subtitle = "Periodo 1948-2021",
                          x = "Año",
-                         y = "Media de la temperatura del aire (°C)")
+                         y = "Temperatura del aire (°C)")
 
 #Veo el grafico terminado
 grafico
